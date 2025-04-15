@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Interactief CV</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="naam">Jouw Naam</h1>
+        <p id="titel">Creatieve Front-end Ontwikkelaar</p>
+    </header>
+
+    <section id="over-mij">
+        <h2>Over Mij</h2>
+        <p>Korte introductie over jezelf. Voeg hier een geanimeerde Canva-GIF toe!</p>
+        <img src="jouw-animatie.gif" alt="Animatie" class="animated">
+    </section>
+
+    <section id="ervaring">
+        <h2>Ervaring</h2>
+        <div class="ervaring-item">🎨 Webdesigner bij Bedrijf X</div>
+        <div class="ervaring-item">🚀 Front-end Developer bij Bedrijf Y</div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-lijst">
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+        </ul>
+    </section>
+
+    <section id="projecten">
+        <h2>Projecten</h2>
+        <div class="project">Portfolio Website</div>
+        <div class="project">CV Animatie Project</div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Neem contact op via <a href="mailto:jouw@email.com">jouw@email.com</a></p>
+    </section>
+
+    <script>
+        gsap.from("#naam", {opacity: 0, y: -50, duration: 1});
+        gsap.from("#titel", {opacity: 0, y: 50, duration: 1, delay: 0.5});
+        gsap.from(".animated", {opacity: 0, scale: 0.8, duration: 1, delay: 1});
+        gsap.from(".ervaring-item", {opacity: 0, x: -50, duration: 1, stagger: 0.3, delay: 1.5});
+        gsap.from(".skills-lijst li", {opacity: 0, scale: 0.5, duration: 1, stagger: 0.2, delay: 2});
+        gsap.from(".project", {opacity: 0, rotateY: 90, scale: 0.5, duration: 1, stagger: 0.3, delay: 2.5});
+        gsap.from("#contact", {opacity: 0, scale: 1.2, duration: 1, delay: 3.2, repeat: -1, yoyo: true});
+    </script>
+</body>
+</html>
